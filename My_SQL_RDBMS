@@ -309,4 +309,17 @@ mysql> select id as EmployeeId , name EmployeeName, city EmployeeCity from tb1em
 +------------+--------------+--------------+
 4 rows in set (0.00 sec)
 
-mysql>
+mysql> update tb1employee set city = "AMD" where name ='Khose';
+Query OK, 1 row affected (0.00 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+mysql> select id as EmployeeId , name EmployeeName, city EmployeeCity from tb1employee;
++------------+--------------+--------------+
+| EmployeeId | EmployeeName | EmployeeCity |
++------------+--------------+--------------+
+|        101 | Kaushik      | pune         |
+|        103 | bob          | pune         |
+|        105 | rohan        | pune         |
+|        106 | Khose        | AMD          |
++------------+--------------+--------------+
+4 rows in set (0.00 sec)
