@@ -323,3 +323,15 @@ mysql> select id as EmployeeId , name EmployeeName, city EmployeeCity from tb1em
 |        106 | Khose        | AMD          |
 +------------+--------------+--------------+
 4 rows in set (0.00 sec)
+
+mysql> create table tb1student (roll int unique, name varchar(50),city varchar(50),dept varchar (50));
+Query OK, 0 rows affected (0.01 sec)
+
+mysql> insert tb1student values (301,'ron','pune','CSE');
+Query OK, 1 row affected (0.00 sec)
+
+mysql> insert tb1student values (301,'shon','AMD','CSE');
+ERROR 1062 (23000): Duplicate entry '301' for key 'tb1student.roll'
+mysql> insert tb1student values (311,'shon','AMD','CSE');
+Query OK, 1 row affected (0.00 sec)
+
