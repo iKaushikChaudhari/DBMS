@@ -173,4 +173,30 @@ mysql> select id, name, city,salary from tb1employee where city is NULL;
 +------+------+------+--------+
 1 row in set (0.00 sec)
 
+mysql> select id from tb1employee;
++------+
+| id   |
++------+
+|  101 |
+|  102 |
+|  103 |
+|  103 |
+|  105 |
+|  106 |
++------+
+6 rows in set (0.00 sec)
+
+mysql> select id as EmployeeID from tb1employee;
++------------+
+| EmployeeID |
++------------+
+|        101 |
+|        102 |
+|        103 |
+|        103 |
+|        105 |
+|        106 |
++------------+
+6 rows in set (0.00 sec)
+
 mysql>
