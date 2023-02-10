@@ -1,0 +1,135 @@
+Enter password: ****
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 8
+Server version: 8.0.31 MySQL Community Server - GPL
+
+Copyright (c) 2000, 2022, Oracle and/or its affiliates.
+
+Oracle is a registered trademark of Oracle Corporation and/or its
+affiliates. Other names may be trademarks of their respective
+owners.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+mysql> create database fueldemo;
+Query OK, 1 row affected (0.01 sec)
+
+mysql> show
+    -> ^C
+mysql> show databases;
++--------------------+
+| Database           |
++--------------------+
+| emp                |
+| fueldemo           |
+| information_schema |
+| mysql              |
+| performance_schema |
+| sakila             |
+| super30            |
+| sys                |
+| world              |
++--------------------+
+9 rows in set (0.02 sec)
+
+mysql> use fueldemo;
+Database changed
+mysql> create table tb1Employee (id int, name varchar(50), city varchar(50), salary float);
+Query OK, 0 rows affected (0.02 sec)
+
+mysql> show tables;
++--------------------+
+| Tables_in_fueldemo |
++--------------------+
+| tb1employee        |
++--------------------+
+1 row in set (0.01 sec)
+
+mysql> desc tb1employee;
++--------+-------------+------+-----+---------+-------+
+| Field  | Type        | Null | Key | Default | Extra |
++--------+-------------+------+-----+---------+-------+
+| id     | int         | YES  |     | NULL    |       |
+| name   | varchar(50) | YES  |     | NULL    |       |
+| city   | varchar(50) | YES  |     | NULL    |       |
+| salary | float       | YES  |     | NULL    |       |
++--------+-------------+------+-----+---------+-------+
+4 rows in set (0.00 sec)
+
+mysql> insert into tb1employee values(101,"Kaushik", "Pune",95654);
+Query OK, 1 row affected (0.01 sec)
+
+mysql> insert into tb1employee (id, name , city,salary) values (102,'Sherya','Amd', 190493);
+Query OK, 1 row affected (0.00 sec)
+
+mysql> insert into tb1employee (id,name) values (103, 'Sam');
+Query OK, 1 row affected (0.00 sec)
+
+mysql> insert into tb1employee (city,salary,name,id) values ('Delhi',363424,'bob',103);
+Query OK, 1 row affected (0.00 sec)
+
+mysql> show tables;
++--------------------+
+| Tables_in_fueldemo |
++--------------------+
+| tb1employee        |
++--------------------+
+1 row in set (0.00 sec)
+
+mysql> insert into tb1employee(id,name,city,salary) values (105,'rohan','mumbai',32425),(106,'Khose','amd',35345);
+Query OK, 2 rows affected (0.00 sec)
+Records: 2  Duplicates: 0  Warnings: 0
+
+mysql> select * from tb1employee;
++------+---------+--------+--------+
+| id   | name    | city   | salary |
++------+---------+--------+--------+
+|  101 | Kaushik | Pune   |  95654 |
+|  102 | Sherya  | Amd    | 190493 |
+|  103 | Sam     | NULL   |   NULL |
+|  103 | bob     | Delhi  | 363424 |
+|  105 | rohan   | mumbai |  32425 |
+|  106 | Khose   | amd    |  35345 |
++------+---------+--------+--------+
+6 rows in set (0.00 sec)
+
+mysql> select id,name,city,salary from tb1employee;
++------+---------+--------+--------+
+| id   | name    | city   | salary |
++------+---------+--------+--------+
+|  101 | Kaushik | Pune   |  95654 |
+|  102 | Sherya  | Amd    | 190493 |
+|  103 | Sam     | NULL   |   NULL |
+|  103 | bob     | Delhi  | 363424 |
+|  105 | rohan   | mumbai |  32425 |
+|  106 | Khose   | amd    |  35345 |
++------+---------+--------+--------+
+6 rows in set (0.00 sec)
+
+mysql> select id,name,city from tb1employee;
++------+---------+--------+
+| id   | name    | city   |
++------+---------+--------+
+|  101 | Kaushik | Pune   |
+|  102 | Sherya  | Amd    |
+|  103 | Sam     | NULL   |
+|  103 | bob     | Delhi  |
+|  105 | rohan   | mumbai |
+|  106 | Khose   | amd    |
++------+---------+--------+
+6 rows in set (0.00 sec)
+
+mysql> select name,city from tb1employee;
++---------+--------+
+| name    | city   |
++---------+--------+
+| Kaushik | Pune   |
+| Sherya  | Amd    |
+| Sam     | NULL   |
+| bob     | Delhi  |
+| rohan   | mumbai |
+| Khose   | amd    |
++---------+--------+
+6 rows in set (0.00 sec)
+
+mysql>
