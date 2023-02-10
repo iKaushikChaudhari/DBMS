@@ -199,4 +199,30 @@ mysql> select id as EmployeeID from tb1employee;
 +------------+
 6 rows in set (0.00 sec)
 
+mysql> select id as EmployeeID,name as EmployeeName,city as EmployeeCity,salary as EmployeeSal from tb1employee;
++------------+--------------+--------------+-------------+
+| EmployeeID | EmployeeName | EmployeeCity | EmployeeSal |
++------------+--------------+--------------+-------------+
+|        101 | Kaushik      | Pune         |       95654 |
+|        102 | Sherya       | Amd          |      190493 |
+|        103 | Sam          | NULL         |        NULL |
+|        103 | bob          | Delhi        |      363424 |
+|        105 | rohan        | mumbai       |       32425 |
+|        106 | Khose        | amd          |       35345 |
++------------+--------------+--------------+-------------+
+6 rows in set (0.00 sec)
+
+mysql> select id EmployeeID,name EmployeeName,city EmployeeCity,salary EmployeeSal from tb1employee;
++------------+--------------+--------------+-------------+
+| EmployeeID | EmployeeName | EmployeeCity | EmployeeSal |
++------------+--------------+--------------+-------------+
+|        101 | Kaushik      | Pune         |       95654 |
+|        102 | Sherya       | Amd          |      190493 |
+|        103 | Sam          | NULL         |        NULL |
+|        103 | bob          | Delhi        |      363424 |
+|        105 | rohan        | mumbai       |       32425 |
+|        106 | Khose        | amd          |       35345 |
++------------+--------------+--------------+-------------+
+6 rows in set (0.00 sec)
+
 mysql>
