@@ -225,4 +225,15 @@ mysql> select id EmployeeID,name EmployeeName,city EmployeeCity,salary EmployeeS
 +------------+--------------+--------------+-------------+
 6 rows in set (0.00 sec)
 
+mysql> desc tb1employee;
++--------+-------------+------+-----+---------+-------+
+| Field  | Type        | Null | Key | Default | Extra |
++--------+-------------+------+-----+---------+-------+
+| id     | int         | YES  |     | NULL    |       |
+| name   | varchar(50) | YES  |     | NULL    |       |
+| city   | varchar(50) | YES  |     | NULL    |       |
+| salary | float       | YES  |     | NULL    |       |
++--------+-------------+------+-----+---------+-------+
+4 rows in set (0.00 sec)
+
 mysql>
