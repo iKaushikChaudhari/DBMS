@@ -148,4 +148,29 @@ mysql> select id, name, city,salary from tb1employee where name ='Kaushik';
 +------+---------+------+--------+
 1 row in set (0.00 sec)
 
+mysql> select id, name, city,salary from tb1employee where city='';
+Empty set (0.00 sec)
+
+mysql> select id, name, city,salary from tb1employee where city is NULL;
++------+------+------+--------+
+| id   | name | city | salary |
++------+------+------+--------+
+|  103 | Sam  | NULL |   NULL |
++------+------+------+--------+
+1 row in set (0.00 sec)
+
+mysql> select id, name, city,salary from tb1employee where city = 'NULL';
+Empty set (0.00 sec)
+
+mysql> select id, name, city,salary from tb1employee where city = NULL;
+Empty set (0.00 sec)
+
+mysql> select id, name, city,salary from tb1employee where city is NULL;
++------+------+------+--------+
+| id   | name | city | salary |
++------+------+------+--------+
+|  103 | Sam  | NULL |   NULL |
++------+------+------+--------+
+1 row in set (0.00 sec)
+
 mysql>
