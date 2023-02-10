@@ -335,3 +335,19 @@ ERROR 1062 (23000): Duplicate entry '301' for key 'tb1student.roll'
 mysql> insert tb1student values (311,'shon','AMD','CSE');
 Query OK, 1 row affected (0.00 sec)
 
+mysql> insert tb1student values (null,"khose","pune","ETX");
+Query OK, 1 row affected (0.00 sec)
+
+mysql> insert tb1student values (null,"Holkar","AMD","ENTC");
+Query OK, 1 row affected (0.00 sec)
+
+mysql> select roll,name,city,dept from tb1student;
++------+--------+------+------+
+| roll | name   | city | dept |
++------+--------+------+------+
+|  301 | ron    | pune | CSE  |
+|  311 | shon   | AMD  | CSE  |
+| NULL | khose  | pune | ETX  |
+| NULL | Holkar | AMD  | ENTC |
++------+--------+------+------+
+4 rows in set (0.00 sec)
