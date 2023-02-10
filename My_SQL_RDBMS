@@ -351,3 +351,29 @@ mysql> select roll,name,city,dept from tb1student;
 | NULL | Holkar | AMD  | ENTC |
 +------+--------+------+------+
 4 rows in set (0.00 sec)
+
+mysql> create table tb1product (id int unique, name varchar(50) not null, price int);
+Query OK, 0 rows affected (0.01 sec)
+
+mysql> desc tb1product;
++-------+-------------+------+-----+---------+-------+
+| Field | Type        | Null | Key | Default | Extra |
++-------+-------------+------+-----+---------+-------+
+| id    | int         | YES  | UNI | NULL    |       |
+| name  | varchar(50) | NO   |     | NULL    |       |
+| price | int         | YES  |     | NULL    |       |
++-------+-------------+------+-----+---------+-------+
+3 rows in set (0.00 sec)
+
+mysql> insert into tb1product values (101,'Mobile',534);
+Query OK, 1 row affected (0.00 sec)
+
+mysql> insert into tb1product values (111,null,244);
+ERROR 1048 (23000): Column 'name' cannot be null
+mysql> select id, name ,price from tb1product;
++------+--------+-------+
+| id   | name   | price |
++------+--------+-------+
+|  101 | Mobile |   534 |
++------+--------+-------+
+1 row in set (0.00 sec)
