@@ -236,4 +236,62 @@ mysql> desc tb1employee;
 +--------+-------------+------+-----+---------+-------+
 4 rows in set (0.00 sec)
 
+mysql> delete from tb1employee where id =102;
+Query OK, 1 row affected (0.00 sec)
+
+mysql> select id EmployeeID,name EmployeeName,city EmployeeCity,salary EmployeeSal from tb1employee;
++------------+--------------+--------------+-------------+
+| EmployeeID | EmployeeName | EmployeeCity | EmployeeSal |
++------------+--------------+--------------+-------------+
+|        101 | Kaushik      | Pune         |       95654 |
+|        103 | Sam          | NULL         |        NULL |
+|        103 | bob          | Delhi        |      363424 |
+|        105 | rohan        | mumbai       |       32425 |
+|        106 | Khose        | amd          |       35345 |
++------------+--------------+--------------+-------------+
+5 rows in set (0.00 sec)
+
+mysql> delete from tb1employee where name='sam';
+Query OK, 1 row affected (0.00 sec)
+
+mysql> select id EmployeeID,name EmployeeName,city EmployeeCity,salary EmployeeSal from tb1employee;
++------------+--------------+--------------+-------------+
+| EmployeeID | EmployeeName | EmployeeCity | EmployeeSal |
++------------+--------------+--------------+-------------+
+|        101 | Kaushik      | Pune         |       95654 |
+|        103 | bob          | Delhi        |      363424 |
+|        105 | rohan        | mumbai       |       32425 |
+|        106 | Khose        | amd          |       35345 |
++------------+--------------+--------------+-------------+
+4 rows in set (0.00 sec)
+
+mysql> insert into tb1employee (id,name) values (107, 'ram');
+Query OK, 1 row affected (0.00 sec)
+
+mysql> select id EmployeeID,name EmployeeName,city EmployeeCity,salary EmployeeSal from tb1employee;
++------------+--------------+--------------+-------------+
+| EmployeeID | EmployeeName | EmployeeCity | EmployeeSal |
++------------+--------------+--------------+-------------+
+|        101 | Kaushik      | Pune         |       95654 |
+|        103 | bob          | Delhi        |      363424 |
+|        105 | rohan        | mumbai       |       32425 |
+|        106 | Khose        | amd          |       35345 |
+|        107 | ram          | NULL         |        NULL |
++------------+--------------+--------------+-------------+
+5 rows in set (0.00 sec)
+
+mysql> delete from tb1employee where city is null;
+Query OK, 1 row affected (0.00 sec)
+
+mysql> select id EmployeeID,name EmployeeName,city EmployeeCity,salary EmployeeSal from tb1employee;
++------------+--------------+--------------+-------------+
+| EmployeeID | EmployeeName | EmployeeCity | EmployeeSal |
++------------+--------------+--------------+-------------+
+|        101 | Kaushik      | Pune         |       95654 |
+|        103 | bob          | Delhi        |      363424 |
+|        105 | rohan        | mumbai       |       32425 |
+|        106 | Khose        | amd          |       35345 |
++------------+--------------+--------------+-------------+
+4 rows in set (0.00 sec)
+
 mysql>
