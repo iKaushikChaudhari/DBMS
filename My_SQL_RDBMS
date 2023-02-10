@@ -294,4 +294,19 @@ mysql> select id EmployeeID,name EmployeeName,city EmployeeCity,salary EmployeeS
 +------------+--------------+--------------+-------------+
 4 rows in set (0.00 sec)
 
+mysql> update tb1employee set city = "pune";
+Query OK, 4 rows affected (0.00 sec)
+Rows matched: 4  Changed: 4  Warnings: 0
+
+mysql> select id as EmployeeId , name EmployeeName, city EmployeeCity from tb1employee;
++------------+--------------+--------------+
+| EmployeeId | EmployeeName | EmployeeCity |
++------------+--------------+--------------+
+|        101 | Kaushik      | pune         |
+|        103 | bob          | pune         |
+|        105 | rohan        | pune         |
+|        106 | Khose        | pune         |
++------------+--------------+--------------+
+4 rows in set (0.00 sec)
+
 mysql>
