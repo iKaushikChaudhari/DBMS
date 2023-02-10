@@ -132,4 +132,20 @@ mysql> select name,city from tb1employee;
 +---------+--------+
 6 rows in set (0.00 sec)
 
+mysql> select id, name, city from tb1employee where id=101;
++------+---------+------+
+| id   | name    | city |
++------+---------+------+
+|  101 | Kaushik | Pune |
++------+---------+------+
+1 row in set (0.00 sec)
+
+mysql> select id, name, city,salary from tb1employee where name ='Kaushik';
++------+---------+------+--------+
+| id   | name    | city | salary |
++------+---------+------+--------+
+|  101 | Kaushik | Pune |  95654 |
++------+---------+------+--------+
+1 row in set (0.00 sec)
+
 mysql>
